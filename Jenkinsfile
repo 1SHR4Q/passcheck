@@ -1,7 +1,6 @@
 pipeline {
     agent any
     environment {
-        email = 'ishraqrahaman@gmail.com'
         project = 'password strength check'
     }
 
@@ -20,12 +19,12 @@ pipeline {
     }
     post {
         success {
-            mail to: "${email}",
+            mail to: "${params.EMAIL}",
                 subject: 'build test success',
                 body: "${project} has ran successfully with no issue"
         }
         failure {
-            mail to: "${email}",
+            mail to: "${params.EMAIL}",
                 subject: 'build test fail',
                 body: "${project} has ran to difficulties that must be amended"
 
