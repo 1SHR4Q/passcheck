@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage("Install libraries") {
             steps{
-                sh 'pip install pytest --break-system-packages'
+                sh 'python3 -m pip install pytest'
                 echo 'Libraries/Dependencies installed '
             }
         }
         stage("Testing file"){
             steps{ 
-                sh 'pytest ./test.py -v'
+                sh 'python3 -m pytest ./test.py -v'
             }
         }
     }
