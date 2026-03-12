@@ -1,10 +1,10 @@
 from main import *
 
-def weak():
+def test_weak():
     assert strengthCheck("abc") == "weak."
 
-def medium():
+def test_medium():
     assert strengthCheck("Abc1!") == "ok?"
 
-def strong():
+def test_strong():
     assert strengthCheck("Abcccc!1") == "strong!"

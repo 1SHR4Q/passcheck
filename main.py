@@ -23,9 +23,9 @@ def strengthCheck(password):
             count += 1
     
     if count <= 2:
-        print ("weak.")
+        return "weak."
     elif count == 3:
-        print ("ok?")
+        return "ok?"
     else:
-        print("strong!")    
+        return "strong!"   
     
